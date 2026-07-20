@@ -5,7 +5,7 @@ VERSION=$(awk -F "=" '/VERSION/ {print $2}' $XCCONFIG_NAME | tr -d ' ')
 BUILD_NUMBER=$(awk -F "=" '/BUILD_NUMBER/ {print $2}' $XCCONFIG_NAME | tr -d ' ')
 
 mkdir -p packages $THEOS_STAGING_DIR/Payload
-cp -rp $THEOS_STAGING_DIR$THEOS_PACKAGE_INSTALL_PREFIX/Applications/TrollFools.app $THEOS_STAGING_DIR/Payload
+cp -rp $THEOS_STAGING_DIR/Applications/TrollFools.app $THEOS_STAGING_DIR/Payload
 chmod 0644 $THEOS_STAGING_DIR/Payload/TrollFools.app/Info.plist
 
 cd $THEOS_STAGING_DIR
